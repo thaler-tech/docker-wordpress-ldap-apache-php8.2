@@ -1,7 +1,7 @@
-# Docker image of Wordpress with LDAP support
-This images is based on the "wordpress:php8.2-apache" tag
+# Docker image of WordPress with LDAP support
+This image is based on the "wordpress:php8.2-apache" tag
 
-Just added this code snippet as suggested by https://github.com/tianon, Wordpress official image mantainer:
+This is forked from dalario's wordpress-ldap Docker hub which in turn was suggested from https://github.com/tianon:
 
 ````
 FROM wordpress:php8.2-apache
@@ -15,8 +15,7 @@ RUN set -x \
 	&& apt-get purge -y --auto-remove libldap2-dev
   ````
   
-  To build the images just run:
+  To build the image just run:
   
   ````
   docker build -t [username]/[imagename] .
-  ````
