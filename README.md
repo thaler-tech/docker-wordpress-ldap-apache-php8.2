@@ -1,10 +1,10 @@
 # Docker image of Wordpress with LDAP support
-This images stays up to date with the original one but with LDAP support
+This images is based on the "wordpress:php8.2-apache" tag
 
 Just added this code snippet as suggested by https://github.com/tianon, Wordpress official image mantainer:
 
 ````
-FROM wordpress
+FROM wordpress:php8.2-apache
 
 RUN set -x \
 	&& apt-get update \
